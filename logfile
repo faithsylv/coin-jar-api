@@ -1,0 +1,14 @@
+2022-02-05 17:24:44.434 ACDT [26467] LOG:  starting PostgreSQL 13.5 on x86_64-apple-darwin21.1.0, compiled by Apple clang version 13.0.0 (clang-1300.0.29.3), 64-bit
+2022-02-05 17:24:44.436 ACDT [26467] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2022-02-05 17:24:44.436 ACDT [26467] LOG:  listening on IPv6 address "::1", port 5432
+2022-02-05 17:24:44.437 ACDT [26467] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2022-02-05 17:24:44.441 ACDT [26468] LOG:  database system was shut down at 2022-02-05 17:24:10 ACDT
+2022-02-05 17:24:44.446 ACDT [26467] LOG:  database system is ready to accept connections
+2022-02-05 17:25:32.695 ACDT [26885] FATAL:  database "faithsylv" does not exist
+2022-02-05 17:29:14.320 ACDT [28440] FATAL:  database "faithsylv" does not exist
+2022-02-05 17:29:33.733 ACDT [28452] FATAL:  database "coin-jar-api_development" does not exist
+2022-02-05 17:34:29.990 ACDT [26467] LOG:  received fast shutdown request
+2022-02-05 17:34:29.991 ACDT [26467] LOG:  aborting any active transactions
+2022-02-05 17:34:29.993 ACDT [26467] LOG:  background worker "logical replication launcher" (PID 26474) exited with exit code 1
+2022-02-05 17:34:29.993 ACDT [26469] LOG:  shutting down
+2022-02-05 17:34:30.003 ACDT [26467] LOG:  database system is shut down
