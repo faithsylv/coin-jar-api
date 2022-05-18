@@ -10,6 +10,9 @@ class UsersController < ApplicationController
   end
 
   def edit
+    user = User.find(params[:id])
+    user.update!(jar_params)
+    render status: :no_content
   end
 
   def show
