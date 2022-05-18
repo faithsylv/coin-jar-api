@@ -9,7 +9,10 @@ class JarsController < ApplicationController
       render status: :created
     end
   
-    def edit
+    def update
+      jar = Jar.find(params[:id])
+      jar.update!(jar_params)
+      render status: :no_content
     end
   
     def show
@@ -20,7 +23,7 @@ class JarsController < ApplicationController
     def destroy
       jar = Jar.find(params[:id].to_i)
       jar.destroy
-      render json: :no_content
+      render status: :no_content
     end
   
     private
