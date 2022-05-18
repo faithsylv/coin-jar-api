@@ -28,7 +28,7 @@ class JarsController < ApplicationController
   
     private
     def jar_params
-      params.require(:jar).permit(:name, :description, :currency)
+      params.require(:jar).permit(:name, :description, :currency, user_ids: [])
     end
   end
   
