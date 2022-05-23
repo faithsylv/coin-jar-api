@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  resources :users, :jars
+  resources :users, :jars, :coins
 end

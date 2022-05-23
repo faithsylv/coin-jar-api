@@ -10,10 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_05_18_061331) do
+ActiveRecord::Schema.define(version: 2022_05_23_001446) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "coins", force: :cascade do |t|
+    t.bigint "jar_id"
+    t.bigint "user_id"
+    t.integer "value"
+    t.string "currency"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["jar_id"], name: "index_coins_on_jar_id"
+    t.index ["user_id"], name: "index_coins_on_user_id"
+  end
 
   create_table "jars", force: :cascade do |t|
     t.string "name"
@@ -41,4 +52,6 @@ ActiveRecord::Schema.define(version: 2022_05_18_061331) do
     t.string "color"
   end
 
+  add_foreign_key "coins", "jars"
+  add_foreign_key "coins", "users"
 end
