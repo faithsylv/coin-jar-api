@@ -1,7 +1,9 @@
 class JarsController < ApplicationController
     def index
       jars = Jar.all
-      render json: jars
+      render json: {
+        jars: jars.map {|jar| ::JarPresenter.new(jar).provide_with_balance}
+      }, status: :ok
     end
   
     def create
